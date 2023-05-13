@@ -7,13 +7,11 @@ export default class ChicagoCheesePizza extends Pizza {
     super()
     this.description = description
 
-    const pizza = new Pizza()
-
     console.log(`\n${this.description}:`)
 
-    pizza.makeDough('fat')
-    pizza.addSauce('garlic')
-    pizza.addCheese('parmesan')
-    pizza.addToppings(['mushrooms', 'olives', 'onions'])
+    this.makeDough('fat')
+    this.addSauce('garlic')
+    this.addCheese('parmesan')
+    this.addToppings(['mushrooms', 'olives', 'onions'])
   }
 }

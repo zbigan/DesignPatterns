@@ -7,12 +7,10 @@ export default class ChicagoMargarittaPizza extends Pizza {
     super()
     this.description = description
 
-    const pizza = new Pizza()
-
     console.log(`\n${this.description}:`)
 
-    pizza.makeDough('fat')
-    pizza.addSauce('soft')
-    pizza.addCheese('mozarella')
+    this.makeDough('fat')
+    this.addSauce('soft')
+    this.addCheese('mozarella')
   }
 }

@@ -1,4 +1,4 @@
-export default class Pizza {
+export default abstract class Pizza {
   sauce = 'default'
   dough = 'default'
   cheese = 'default'

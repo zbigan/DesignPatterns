@@ -7,13 +7,11 @@ export default class NYPepperoniPizza extends Pizza {
     super()
     this.description = description
 
-    const pizza = new Pizza()
-
     console.log(`\n${this.description}:`)
 
-    pizza.makeDough('crust')
-    pizza.addSauce('chilli')
-    pizza.addCheese('mozarella')
-    pizza.addToppings(['pepperoni'])
+    this.makeDough('crust')
+    this.addSauce('chilli')
+    this.addCheese('mozarella')
+    this.addToppings(['pepperoni'])
   }
 }
