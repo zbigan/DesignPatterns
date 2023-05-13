@@ -1,17 +1,12 @@
 import Pizza from "./Pizza"
 
 export default class ChicagoCheesePizza extends Pizza {
-  description: string
-
-  constructor(description: string) {
+  constructor(name: string) {
     super()
-    this.description = description
-
-    console.log(`\n${this.description}:`)
-
-    this.makeDough('fat')
-    this.addSauce('garlic')
-    this.addCheese('parmesan')
-    this.addToppings(['mushrooms', 'olives', 'onions'])
+    this.name = name
+    this.dough = 'fat'
+    this.sauce = 'garlic'
+    this.cheese = 'parmesan'
+    this.toppings = ['mushrooms', 'olives', 'onions']
   }
 }

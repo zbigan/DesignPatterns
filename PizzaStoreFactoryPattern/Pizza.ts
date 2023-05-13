@@ -1,29 +1,18 @@
 export default abstract class Pizza {
-  sauce = 'default'
-  dough = 'default'
-  cheese = 'default'
-  toppings = ['olives']
+  public name = 'pizza'
+  public sauce = 'default'
+  public dough = 'default'
+  public cheese = 'default'
+  public toppings = ['olives']
 
-  public makeDough(dough: string): void {
-    console.log(`making ${dough} dough`)
-    this.dough = dough
+  public prepare(): void {
+    console.log(`\n----Preparing ${this.name}----`)
+    console.log(`Tossing ${this.name} dough`)
+    console.log(`Adding ${this.sauce} sauce`)
+    console.log(`Adding ${this.cheese} cheese`)
+    console.log(`Adding toppings: ${this.toppings.join(", ")}`)
   }
 
-  public addSauce(sauce: string) {
-    console.log(`adding ${sauce} sauce`)
-    this.sauce = sauce
-  }
-
-  public addCheese(cheese: string) {
-    console.log(`adding ${cheese} cheese`)
-    this.cheese = cheese
-  }
-
-  public addToppings(toppings: string[]) {
-    console.log(`adding toppings: ${toppings.join(", ")}`)
-    this.toppings = toppings
-  }
-  
   public bake(): void {
     console.log('baking pizza')
   }

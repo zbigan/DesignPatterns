@@ -10,6 +10,7 @@ export default abstract class PizzaStore {
 
     if (!pizza) return
 
+    pizza.prepare()
     pizza.bake()
     pizza.cut()
     pizza.pack()
