@@ -10,7 +10,7 @@ import Mushroom from "./ingredients/toppings/Mushroom";
 import Olives from "./ingredients/toppings/Olives";
 import Onion from "./ingredients/toppings/Onion";
 import Topping from "./ingredients/toppings/Topping";
-import { IngredientsFactory } from "./PizzaStore";
+import { IngredientsFactory } from "./IngredientsFactory";
 
 export default class ChicagoPizzaIngredientsFactory implements IngredientsFactory {
   createDough(): Dough {

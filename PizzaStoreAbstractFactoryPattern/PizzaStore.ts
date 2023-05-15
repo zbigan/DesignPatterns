@@ -7,14 +7,6 @@ import Pizza from "./Pizza";
 
 export type PizzaType = 'cheese' | 'pepperoni' | 'margaritta'
 
-export interface IngredientsFactory {
-  createDough(): Dough;
-  createSauce(): Sauce;
-  craeteCheese(): Cheese;
-  createToppings(): Topping[];
-  createPepperoni(): Pepperoni;
-}
-
 export default abstract class PizzaStore {
   public orderPizza(type: PizzaType): Pizza | undefined {
     const pizza = this.makePizza(type)

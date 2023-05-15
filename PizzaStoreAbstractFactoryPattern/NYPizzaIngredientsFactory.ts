@@ -11,7 +11,7 @@ import Mushroom from "./ingredients/toppings/Mushroom";
 import Onion from "./ingredients/toppings/Onion";
 import RedPepper from "./ingredients/toppings/RedPepper";
 import Topping from "./ingredients/toppings/Topping";
-import { IngredientsFactory } from "./PizzaStore";
+import { IngredientsFactory } from "./IngredientsFactory";
 
 export default class NYPizzaIngredientsFactory implements IngredientsFactory {
   createDough(): Dough {
