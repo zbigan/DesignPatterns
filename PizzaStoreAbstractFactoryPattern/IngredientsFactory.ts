@@ -4,7 +4,7 @@ import Pepperoni from "./ingredients/pepperoni/Pepperoni";
 import Sauce from "./ingredients/sauce/Sauce";
 import Topping from "./ingredients/toppings/Topping";
 
-export interface IngredientsFactory {
+export default interface IngredientsFactory {
   createDough(): Dough;
   createSauce(): Sauce;
   craeteCheese(): Cheese;

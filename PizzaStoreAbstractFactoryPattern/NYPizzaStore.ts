@@ -1,9 +1,10 @@
 import CheesePizza from "./CheesePizza";
+import IngredientsFactory from "./IngredientsFactory";
 import Margaritta from "./MargarittaPizza";
 import NYPizzaIngredientsFactory from "./NYPizzaIngredientsFactory";
 import PepperoniPizza from "./PepperoniPizza";
 import Pizza from "./Pizza";
-import PizzaStore, { IngredientsFactory, PizzaType } from "./PizzaStore";
+import PizzaStore, { PizzaType } from "./PizzaStore";
 
 export default class NYPizzaStore extends PizzaStore {
   pizzaIngredientFactory: IngredientsFactory

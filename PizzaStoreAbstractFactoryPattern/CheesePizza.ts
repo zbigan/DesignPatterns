@@ -1,5 +1,5 @@
+import IngredientsFactory from "./IngredientsFactory";
 import Pizza from "./Pizza";
-import { IngredientsFactory } from "./PizzaStore";
 
 export default class CheesePizza extends Pizza {
   ingredientsFactory: IngredientsFactory
