@@ -1,1 +1,1 @@
-Design patterns learning form Head First Design Patterns Book (ISBN: 9781492078005)
+Design patterns learning from Head First Design Patterns Book (ISBN: 9781492078005)
