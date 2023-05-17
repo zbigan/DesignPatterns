@@ -1,14 +1,9 @@
-import Cheese from "./ingredients/cheese/Cheese";
-import Dough from "./ingredients/dough/Dough";
-import Pepperoni from "./ingredients/pepperoni/Pepperoni";
-import Sauce from "./ingredients/sauce/Sauce";
-import Topping from "./ingredients/toppings/Topping";
 import Pizza from "./Pizza";
 
 export type PizzaType = 'cheese' | 'pepperoni' | 'margaritta'
 
-export default abstract class PizzaStore {
-  public orderPizza(type: PizzaType): Pizza | undefined {
+export default abstract class PizzaStore<T extends PizzaType = PizzaType> {
+  public orderPizza(type: T): Pizza | undefined {
     const pizza = this.makePizza(type)
 
     if (!pizza) return
@@ -21,5 +16,5 @@ export default abstract class PizzaStore {
     return pizza
   }
 
-  public abstract makePizza(type: PizzaType): Pizza | null
+  public abstract makePizza(type: T): Pizza | null
 }

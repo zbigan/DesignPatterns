@@ -2,11 +2,12 @@ import CheesePizza from "./CheesePizza";
 import IngredientsFactory from "./IngredientsFactory";
 import Margaritta from "./MargarittaPizza";
 import NYPizzaIngredientsFactory from "./NYPizzaIngredientsFactory";
-import PepperoniPizza from "./PepperoniPizza";
 import Pizza from "./Pizza";
-import PizzaStore, { PizzaType } from "./PizzaStore";
+import PizzaStore from "./PizzaStore";
 
-export default class NYPizzaStore extends PizzaStore {
+type NyPizza = 'cheese' | 'margaritta'
+
+export default class NYPizzaStore extends PizzaStore<NyPizza> {
   pizzaIngredientFactory: IngredientsFactory
 
   constructor() {
@@ -14,16 +15,12 @@ export default class NYPizzaStore extends PizzaStore {
     this.pizzaIngredientFactory = new NYPizzaIngredientsFactory()
   }
 
-  public makePizza(type: PizzaType): Pizza | null {
+  public makePizza(type: NyPizza): Pizza | null {
     let pizza = null
     
     if (type==='cheese') {
       pizza = new CheesePizza(this.pizzaIngredientFactory)
       pizza.setName('NY style cheese pizza')
-    }
-    if (type==='pepperoni') {
-      pizza = new PepperoniPizza(this.pizzaIngredientFactory)
-      pizza.setName('NY style pepperoni pizza')
     }
     if (type==='margaritta') {
       pizza = new Margaritta(this.pizzaIngredientFactory)
