@@ -1,8 +1,8 @@
 import CommandObject from "./CommandObject";
 
 const DEFAULT_COMMAND: CommandObject = {
-  execute() {},
-  undo() {}
+  execute() {console.log('default execute')},
+  undo() {console.log('default undo')}
 }
 
 const SLOTS_TOTAL = 7
@@ -10,12 +10,12 @@ const SLOTS_TOTAL = 7
 export default class RemoteControl {
   private onButtons: CommandObject[]
   private offButtons: CommandObject[]
-  private lastCommandUsed: CommandObject
+  private lastCommandsUsed: CommandObject[]
 
   constructor() {
     this.onButtons = new Array(SLOTS_TOTAL).fill(DEFAULT_COMMAND)
     this.offButtons = new Array(SLOTS_TOTAL).fill(DEFAULT_COMMAND)
-    this.lastCommandUsed = DEFAULT_COMMAND
+    this.lastCommandsUsed = []
   }
 
   public setSlot(slot: number, onCommand: CommandObject, offCommand: CommandObject) {
@@ -25,15 +25,20 @@ export default class RemoteControl {
 
   public pressOnButton(slot: number) {
     this.onButtons[slot].execute()
-    this.lastCommandUsed = this.onButtons[slot]
+    this.lastCommandsUsed.push(this.onButtons[slot])
   }
 
   public pressOffButton(slot: number) {
     this.offButtons[slot].execute()
-    this.lastCommandUsed = this.offButtons[slot]
+    this.lastCommandsUsed.push(this.offButtons[slot])
   }
 
   public pressUndoButton() {
-    this.lastCommandUsed.undo()
+    const lastCommand = this.lastCommandsUsed.pop()
+    if (lastCommand) {
+      lastCommand.undo()
+    } else {
+      DEFAULT_COMMAND.undo()
+    }
   }
 }

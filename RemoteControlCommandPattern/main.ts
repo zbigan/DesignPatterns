@@ -53,3 +53,12 @@ console.log('-----------about to exit party mode-----------')
 remoteControl.pressOffButton(3)
 console.log('-----------about to undo-----------')
 remoteControl.pressUndoButton()
+
+console.log('-----------about to undo-----------')
+remoteControl.pressUndoButton()
+
+console.log('-----------about to undo-----------')
+remoteControl.pressUndoButton()
+
+console.log('-----------about to undo-----------')
+remoteControl.pressUndoButton()
