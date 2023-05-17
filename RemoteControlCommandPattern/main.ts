@@ -2,8 +2,8 @@ import CloseGarageDoorCommand from "./commands/CloseGarageDoorCommand";
 import OpenGarageDoorCommand from "./commands/OpenGarageDoorCommand";
 import TurnLightOffCommand from "./commands/TurnLightOffCommand";
 import TurnLightOnCommand from "./commands/TurnLightOnCommand";
-import TurnStereoOffCommand from "./commands/TurnStereoOffCommand";
-import TurnStereoOnCommand from "./commands/TurnStereoOnCommand";
+import TurnStereoOffCommand from "./commands/TurnStereoWithCdOffCommand";
+import TurnStereoOnCommand from "./commands/TurnStereoWithCdOnCommand";
 import RemoteControl from "./RemoteControl";
 import GarageDoor from "./vendor_classes/GarageDoor";
 import Light from "./vendor_classes/Light";
@@ -23,4 +23,8 @@ remoteControl.pressOnButton(0)
 remoteControl.pressOffButton(0)
 remoteControl.pressOnButton(1)
 remoteControl.pressOffButton(1)
+remoteControl.pressOnButton(2)
+remoteControl.pressOffButton(2)
+
+console.log('-----------undo button about to press-----------')
 remoteControl.pressUndoButton()

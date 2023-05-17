@@ -1,8 +1,15 @@
 export type Source = 'cd' | 'dvd' |  'radio'
 
 export default class Stereo {
-  private volume = 10
-  private source: Source = 'radio'
+  public static defaultVolume = 10
+  public static defaultSource: Source = 'radio'
+  private volume: number
+  private source: Source
+
+  constructor() {
+    this.volume = Stereo.defaultVolume
+    this.source = Stereo.defaultSource
+  }
 
   on() {
     console.log('turns stereo on')

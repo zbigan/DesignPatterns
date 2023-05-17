@@ -17,16 +17,17 @@ export default class NYPizzaStore extends PizzaStore<NyPizza> {
 
   public makePizza(type: NyPizza): Pizza | null {
     let pizza = null
-    
+
     if (type==='cheese') {
       pizza = new CheesePizza(this.pizzaIngredientFactory)
       pizza.setName('NY style cheese pizza')
     }
+
     if (type==='margaritta') {
       pizza = new Margaritta(this.pizzaIngredientFactory)
       pizza.setName('NY style margaritta pizza')
     }
-    
+
     return pizza
   }
 }
