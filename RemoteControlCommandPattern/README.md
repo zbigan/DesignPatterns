@@ -6,7 +6,8 @@ The goal is to provide flexible architecture for managing ON/OFF type commands f
 Command design pattern is used here
 
 CommandObject and RemoteControl classes do not know any specific details of vendor classes logic.
-Concrete logic is encapsulated in 'execute' and 'undo' methods of Classes which implement CommandObject interface.
+Concrete logic is encapsulated in execute() and undo() methods of Classes which implement CommandObject interface.
+Receiver (vendor class) whose methods are being called in execute() and undo() commands is provided as a parameter of particular command class
 
 1. pnpm install
 2. npx -y tsc
